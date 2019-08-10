@@ -1,0 +1,2 @@
+# wiseMinde
+The WiseMinde Website
