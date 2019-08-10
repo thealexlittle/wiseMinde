@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Font Awesome CSS -->
+    <!-- Font Awesome Package -->
     <script src="https://kit.fontawesome.com/2926f6cbf3.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -15,28 +15,33 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
+
+    <!-- My Custom CSS -->
+    <link rel="stylesheet" href="lib/style/style.css">
+
   </head>
   <body>
     <!-- SECTION The Navbar  -->
-      <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <nav class="navbar sticky-top navbar-expand navbar-dark">
         <a class="navbar-brand" href="#"> WiseMinde Inc </a>
-          <ul class="nav navbar-nav ml-auto">
-              <li class="nav-item active">
-                  <a class="nav-link" href="#"> Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#"> About </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> Who We Are </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"> Merch </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"> Contact Us </a>
-            </li>
-          </ul>
+        <ul class="nav navbar-nav ml-auto" id = "navMenu">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"> Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" href="#"> About </a>
+         </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Who We Are </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Merch </a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#"> Contact Us </a>
+          </li>
+        </ul>
+        <i class="fas fa-bars ml-auto"></i>
       </nav>
 
       <!-- SECTION Home -->
@@ -68,14 +73,14 @@ Leo urna molestie at elementum eu facilisis sed odio. Gravida neque convallis a 
         <!-- TODO Create User Cards -->
         <div class="container">
             <div class="row">
-                <div class="col-4">
+                <div class="col-md-4">
                     <img src="assets/placeholder.png" alt="A member picture" class = "memberPic">
                 </div>
-                <div class="col">
+                <div class="col-md">
                   <header class = "memberTitle">
-                      <h2> Name </h2>
+                    <h2> Name </h2>
                     <h5>Creative Role</h5>
-                   <h5>Location</h5>
+                    <h5>Location</h5>
                   </header>
                     <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget egestas purus viverra accumsan in nisl nisi scelerisque. Eu volutpat odio facilisis mauris. Tortor id aliquet lectus proin. In metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Libero volutpat sed cras ornare. Ipsum suspendisse ultrices gravida dictum fusce ut placerat.
@@ -88,9 +93,40 @@ Leo urna molestie at elementum eu facilisis sed odio. Gravida neque convallis a 
       <!-- SECTION Merch -->
       <section id = "merch">
         <h1>WiseMinde Merch</h1>
-        <!-- TODO Add Carousel & Link to Merch Store-->
+        <!-- TODO Add Cards & Coming soon to Merch Store-->
         <!-- Will Probably be cards of three popular items with links to site -->
         <!-- Make a button to link to the site homepage -->
+        <!-- TODO Set a button when the merch site is up -->
+       <div class="row">
+         <div class="col-md">
+           <div class="card">
+             <div class="card-body">
+               <h3 class="card-title"> Hoodies </h3>
+               <p class="card-text"> WiseMinde Hoodies </p>
+             </div>
+           </div>
+         </div>
+         <div class="col-md">
+           <div class="card">
+             <div class="card-body">
+               <h3 class="card-title"> T-Shirts </h3>
+               <p class="card-text"> WiseMinde T-Shirts </p>
+             </div>
+           </div>
+         </div>
+         <div class="col-md">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title"> Hats </h3>
+              <p class="card-text"> WiseMinde Hats </p>
+            </div>
+          </div>
+        </div>
+       </div>
+
+       <button disabled="disabled" id = "merch-link">
+         MERCH STORE COMING SOON
+       </button>
       </section>
 
       <!-- SECTION Contact -->

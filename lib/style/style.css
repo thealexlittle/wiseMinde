@@ -1,0 +1,51 @@
+:root{
+    --bg-dark: rgb(0, 0, 0);
+    --bg-light: rgb(255, 255, 255);
+    --text-color: rgb(114, 114, 114);
+}
+
+nav{
+    background-color: var(--bg-dark);
+}
+
+#navMenu{
+    display: none;
+}
+
+.fa-bars{
+    color: var(--bg-light);
+}
+
+section{
+    padding: 2em;
+}
+
+#home,
+#members,
+#contact{
+    background-color: var(--bg-dark);
+    color: var(--bg-light);
+}
+
+#about,
+#merch{
+    background-color: var(--bg-light);
+    color: var(--bg-dark);
+}
+
+#members img{
+    height: auto;
+    width: 100%;
+}
+
+
+
+@media screen and (min-width: 560px) { 
+    #navMenu{
+        display: flex;
+    }
+    .fa-bars{
+        display: none;
+    }
+    
+}
