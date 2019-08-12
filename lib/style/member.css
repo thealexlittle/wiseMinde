@@ -1,0 +1,101 @@
+
+:root{
+    --bg-dark: rgb(0, 0, 0);
+    --bg-light: rgb(255, 255, 255);
+    --text-color: rgb(114, 114, 114);
+    --i-color: rgb(180, 0, 0);
+    
+}
+
+
+body{
+    font-family: 'Archivo Black', sans-serif;
+}
+
+.memberIntro{
+    display: flex;
+    flex-direction: column;
+}
+
+.bio p,
+.bio h3{
+    display: none;
+}
+
+.bio img{
+    width: 100%;
+}
+
+.bio .icons{
+    display: flex;
+    justify-content: space-around;
+    font-size: 2em;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 0;
+    
+}
+
+.memberProjects h1{
+    margin: auto;
+    text-align: center;
+}
+
+#albums{
+    display: flex;
+    flex-direction: column;
+}
+
+#albums iframe{
+    display: block;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.bottomBio{
+
+    display: block;
+}
+
+.bottomBio h1{
+    margin: auto;
+    text-align: center;
+}
+
+@media screen and (min-width: 560px){
+
+    .bio img{
+        width: 300px;
+        float: left; 
+        margin: 0px 15px 15px 0px;
+    }
+
+    .bio h3,
+    .bio p{
+        display: block;
+    }
+    
+    .bottomBio{
+        display: none;
+    }
+
+    .bio .icons{
+        display: flex;
+        justify-content: space-around;
+        font-size: 2em;
+        margin: auto;
+    }
+
+    #albums{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: auto;
+
+    }
+
+    footer #socialmedia{
+        font-size: 1em;
+    }
+}
