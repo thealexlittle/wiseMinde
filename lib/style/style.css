@@ -62,7 +62,10 @@ section{
 #members img{
     height: auto;
     max-width: 300px;
+    max-height: 300px;
     width: 100%;
+    border-radius: 10em;
+    margin-bottom: 2em;
 }
 
 #members .icons{
@@ -74,11 +77,6 @@ section{
     color: var(--i-color);
     font-size: 1.2em;
 }
-
-#merch img{
-
-}
-
 
 #merch-link {
     display: block;
@@ -103,12 +101,14 @@ input[name="message"]{
 
 
 footer{
+    margin-top: 1em;
     text-align: center;
 }
 
 #socialmedia{
     color: var(--i-color);
     margin: 1em;
+    margin-top: .5em;
     display: flex;
     justify-content: space-around;
     font-size: 2em;
@@ -122,6 +122,13 @@ footer{
 
     .fa-bars{
         display: none;
+    }
+
+    #about,
+    #merch{
+    padding-left: 10em;
+    padding-right: 10em;
+
     }
 
     #contact img{
