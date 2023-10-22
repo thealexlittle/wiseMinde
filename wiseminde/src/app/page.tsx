@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Navbar from './navbar'
 import {
   createBrowserRouter,
+  createHashRouter,
   RouterProvider,
   Outlet
 } from "react-router-dom";
@@ -16,6 +17,7 @@ import Contact from './pages/contact';
 import Projects from './pages/projects';
 
 export default function App() {
+
   return (
     <>
       <RouterProvider router={router} />
@@ -33,7 +35,7 @@ function Root() {
   )
 }
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Root />,

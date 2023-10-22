@@ -1,29 +1,19 @@
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar(){
     return (
-        <Sidebar>
-            <h1>WiseMinde</h1>
-            <Menu
-                menuItemStyles={{
-                    button: {
-                        // the active class will be added automatically by react router
-                        // so we can use it to style the active menu item
-                        [`&.active`]: {
-                            backgroundColor: '#13395e',
-                            color: '#b6c8d9',
-                        },
-                    },
-                }}
-            >
-                <MenuItem component={<Link to="/artists" />}> The Artists </MenuItem>
-                <MenuItem component={<Link to="/about" />}> The Vision </MenuItem>
-                <MenuItem component={<Link to="/projects" />}> The Projects </MenuItem>
-                <MenuItem component={<Link to="/contact" />}> Contact </MenuItem>
-                <MenuItem component={<Link to="/" />}> Home </MenuItem>
-                <MenuItem component={<Link to="/artists/artist" />}> Test</MenuItem>
-            </Menu>
-        </Sidebar>
+        <aside className="h-auto px-2" aria-label="Sidebar">
+            <Link to="/">WiseMinde</Link>
+            <ul className=" w-24">
+                <li className="flex flex-col">
+                    <Link to="/artists">The Artists</Link>
+                    <Link to="/about">The Vision</Link>
+                    <Link to="/projects">The Projects</Link>
+                    <Link to="/contact">The Vision</Link>
+                    <Link to="/artists/artist">Test Page</Link>
+                </li>
+            </ul>
+        </aside>
     )
 }
