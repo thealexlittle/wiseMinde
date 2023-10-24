@@ -27,7 +27,7 @@ export default function App() {
 
 function Root() {
   return (
-    <main className='flex flex-col pt-4 sm:flex-row px-2 h-screen'>
+    <main className='flex flex-col pt-6 sm:flex-row mx-4 min-h-screen max-h-max'>
       <Navbar />
       <Outlet />
     </main>

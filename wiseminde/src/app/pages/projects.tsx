@@ -1,15 +1,19 @@
-export default function Projects(){
-    return(
-        <main>
-            <h1>Projects</h1>
+import {FaSoundcloud, FaSpotify, FaYoutube} from "react-icons/fa6"
+
+export default function Projects() {
+    return (
+        <div>
+            <h1>The Projects</h1>
+            <div>
             <ProjectList />
-        </main>
+            </div>
+        </div>
     )
 }
 
-function ProjectList(){
+function ProjectList() {
     return (
-        <div>
+        <div className="mx-auto flex flex-row flex-wrap content-center">
             <Photo />
             <Video />
             <Song />
@@ -17,51 +21,55 @@ function ProjectList(){
     )
 }
 
-function Photo(){
+function Photo() {
     return (
-        <div>
+        <div className="m-4">
             <img src="https://picsum.photos/200" alt="" />
             <div>
                 <h3>Photoset</h3>
-                <h4>YYYY</h4>
+                <h3>By Artist</h3>
             </div>
-            <h3>By Artist</h3>
         </div>
     )
 }
 
-function Video(){
+function Video() {
     return (
-        <div>
-            <iframe width="200" height="150" 
-            src="https://www.youtube.com/embed/VwEERD4gSzY?si=dHPrsYfw4SUOkJAK&amp;controls=0" 
-            title="YouTube video player" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen
+        <div className="m-4">
+            <iframe width="200" height="150"
+                src="https://www.youtube.com/embed/VwEERD4gSzY?si=dHPrsYfw4SUOkJAK&amp;controls=0"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
             />
             <div>
                 <h3>Video</h3>
-                <h4>YYYY</h4>
+                <h3>By Artist</h3>
             </div>
-            <h3>By Artist</h3>
+
         </div>
     )
 }
 
-function Song(){
+function Song() {
     return (
-        <div>
+        <div className="m-4">
             <img src="https://picsum.photos/200" alt="" />
-            <ul>
-                <i>SC</i>
-                <i>SP</i>
-                <i>AP</i>
-            </ul>
             <div>
                 <h3>Song</h3>
-                <h4>YYYY</h4>
+                <h3>By Artist</h3>
             </div>
-            <h3>By Artist</h3>
+            <ul className="flex justify-between w-[100px] py-2">
+                <a href="">
+                    <FaSpotify />
+                </a>
+                <a href="">
+                    <FaYoutube />
+                </a>
+                <a href="">
+                    <FaSoundcloud />
+                </a>
+            </ul>
         </div>
     )
 }
