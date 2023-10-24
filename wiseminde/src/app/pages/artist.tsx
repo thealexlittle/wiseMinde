@@ -1,6 +1,6 @@
 export default function Artist() {
     return (
-        <main className="flex px-2">
+        <main className="flex flex-col px-2 sm:flex-row">
             <Details />
             <div>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa eget egestas purus viverra accumsan. Senectus et netus et malesuada fames ac. Posuere lorem ipsum dolor sit amet consectetur adipiscing. Purus gravida quis blandit turpis. Vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra. Eget velit aliquet sagittis id. Imperdiet dui accumsan sit amet nulla. Eu ultrices vitae auctor eu augue ut. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Eu sem integer vitae justo eget magna fermentum iaculis eu.
