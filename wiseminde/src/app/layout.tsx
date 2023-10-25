@@ -1,4 +1,5 @@
-import './globals.css'
+import './theme/css/globals.css'
+import './theme/css/w95.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
@@ -15,7 +16,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='bg-white'>
+    <html lang="en">
+      <link rel="stylesheet" href="w95.css" />
       <body className={inter.className}>{children}</body>
     </html>
   )

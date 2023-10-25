@@ -27,9 +27,16 @@ export default function App() {
 
 function Root() {
   return (
-    <main className='flex flex-col pt-6 sm:flex-row mx-4 min-h-screen max-h-max'>
-      <Navbar />
-      <Outlet />
+    <main className='card card-tertiary w-screen'>
+      <div className='card-header'>
+        <h1>wiseminde.exe</h1>
+      </div>
+      <div className='flex flex-col sm:flex-row pt-2'>
+        <Navbar />
+        <div className='card-body bg-[#00807F] w-full h-screen overflow-scroll'>
+          <Outlet />
+        </div>
+      </div>
     </main>
 
   )
