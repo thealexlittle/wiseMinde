@@ -1,0 +1,79 @@
+{
+    "artists": [
+        {
+            "name": "test",
+            "photo": "https://picsum.photos/300",
+            "outlets": [
+                "testing"
+            ],
+            "socials": {
+                "ig": "test",
+                "tw": "",
+                "yt": "",
+                "sp": ""
+            }
+        },
+        {
+            "name": "alexloggedin",
+            "photo": "/img/members/alexloggedin.png",
+            "outlets": [
+                "photographer",
+                "videographer",
+                "designer"
+            ],
+            "socials": {
+                "ig": "alexloggedin",
+                "tw": "alexloggedout",
+                "yt": "youtube",
+                "sp": "spotify"
+            }
+        }
+    ],
+    "projects": [
+        {
+            "type": "photo",
+            "title": "sum pix",
+            "artist": "alexloggedin",
+            "year": "2020",
+            "links": {
+                "img": "imglink",
+                "url": "url"
+            }
+        },
+        {
+            "type": "video",
+            "title": "sum vids",
+            "artist": "alexloggedin",
+            "year": "2020",
+            "links": {
+                "img": "",
+                "url": "YTurl"
+            }
+        },
+        {
+            "type": "song",
+            "title": "sum music",
+            "artist": "alexloggedin",
+            "year": "2020",
+            "links": {
+                "img": "imglink",
+                "url": "",
+                "songLinks": {
+                    "yt": "url",
+                    "sc": "url",
+                    "sp": "url"
+                }
+            }
+        }
+    ],
+    "bios":[
+        {
+            "name": "test",
+            "bio": "testing out a written bio. This should not be prod."
+        },
+        {
+            "name": "alexloggedin",
+            "bio": "To be honest i'm a jack of all trades, but a master of none. If it has a bettery, i want to know how it works and what I can make with it. Mostly, I like to stand behind the camera whether its shooting videos or doing photoshoots. I also like designing stuff like shirts, hoodies, pants, and even websites."
+        }
+    ]
+}

@@ -1,66 +1,95 @@
 import { BsInstagram, BsTwitter, BsSpotify, BsYoutube } from 'react-icons/bs'
+import data from "../data.json"
+import { useParams } from 'react-router-dom'
 
-export default function Artist() {
+export interface ArtistData {
+    name: string,
+    photo: string,
+    outlets: string[],
+    socials: {
+        ig: string,
+        tw: string,
+        yt: string,
+        sp: string
+    };
+}
+
+export default function ArtistPage() {
+    const { artistname } = useParams();
+
+    function getArtist(name: string | undefined): ArtistData {
+        const ad: ArtistData | undefined = data.artists.find(e => { return e.name == name })
+        return ad ? ad : data.artists[0]
+    }
+
+    function getBio(name:string|undefined): string|undefined {
+        const b: string|undefined = data.bios.find( e => { return e.name == name})?.bio
+        return b ? b : data.bios[0].bio
+    }
+
     return (
-        <main className="flex flex-col px-2 md:flex-row">
-            <Details />
-            <Bio />
+        <main className="flex flex-col px-2 md:flex-row w-full">
+            <Details artist={getArtist(artistname)} />
+            <Bio bio={getBio(artistname)}/>
         </main>
     )
 }
 
 
-function Details() {
+function Details(props: { artist: ArtistData }) {
     return (
         <section className=" flex-none min-w-64 max-w-3xl px-4 mx-auto mb-4">
             <div className='card card-tertiary'>
                 <div className='card-header'>
-                    artist.exe
+                    <h2>artist.exe</h2>
                 </div>
                 <div className='card-body'>
-                    <p className='font-bold'>
-                        Artist
-                    </p>
+                    <h6 className='font-bold'>
+                        {props.artist.name}
+                    </h6>
                 </div>
                 <img
-                    className='card-img-top mx-2'
-                    src="https://picsum.photos/300"
+                    className='card-img-top mx-2 inset-box'
+                    style={{maxWidth: "300px"}}
+                    src={props.artist.photo}
                     alt="image"
                 />
                 <div className='card-footer'>
-                    <Socials />
+                    <p className="inset-box bg-white p-2 mb-2">
+                        {props.artist.outlets.map (o => {return "\\ " +o+" \\"})}
+                    </p>
+                    <Socials socials={props.artist.socials} />
                 </div>
             </div>
         </section>
     )
 }
 
-function Socials() {
+function Socials(props: { socials: ArtistData["socials"] }) {
     return (
         <ul className="flex justify-between">
-            <a href="https://www.instagram.com" className='btn'>
+            <a href={`https://www.instagram.com/${props.socials.ig}`} className='btn'>
                 <BsInstagram size="1.5em" />
             </a>
-            <a href="https://www.twitter.com" className='btn'>
-                <BsTwitter size="1.5em"/>
+            <a href={`https://www.twitter.com/${props.socials.tw}`} className='btn'>
+                <BsTwitter size="1.5em" />
             </a>
-            <a href="https://www.spotify.com" className='btn'>
-                <BsSpotify size="1.5em"/>
+            <a href={`https://www.spotify.com/${props.socials.sp}`} className='btn'>
+                <BsSpotify size="1.5em" />
             </a>
         </ul>
     )
 }
 
-function Bio() {
+function Bio(props:{bio: string|undefined}) {
     return (
         <div className='card card-tertiary'>
             <div className='card-header'>
-                bio.exe
+                <h2>bio.exe</h2>
             </div>
-            <div className='card-body bg-white h-fit m-1'>
+            <div className='card-body inset-box bg-white h-fit m-1'>
                 <p className='pr-2 mr-2 card-text'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa eget egestas purus viverra accumsan. Senectus et netus et malesuada fames ac. Posuere lorem ipsum dolor sit amet consectetur adipiscing. Purus gravida quis blandit turpis. Vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra. Eget velit aliquet sagittis id. Imperdiet dui accumsan sit amet nulla. Eu ultrices vitae auctor eu augue ut. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Eu sem integer vitae justo eget magna fermentum iaculis eu.
-                    Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum. Ultrices mi tempus imperdiet nulla malesuada. Elementum pulvinar etiam non quam lacus suspendisse faucibus. Cum sociis natoque penatibus et magnis dis parturient. Lacus vestibulum sed arcu non odio euismod lacinia. Lectus sit amet est placerat in egestas erat. Vestibulum lectus mauris ultrices eros in cursus turpis massa. Semper quis lectus nulla at. Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer. In cursus turpis massa tincidunt dui ut ornare. Urna condimentum mattis pellentesque id nibh tortor id aliquet lectus. Diam quam nulla porttitor massa id neque. Id porta nibh venenatis cras sed. Morbi tristique senectus et netus et malesuada fames ac. Ultricies mi eget mauris pharetra et. Sed elementum tempus egestas sed sed risus pretium. Velit egestas dui id ornare arcu odio
+                    {props.bio}
                 </p>
             </div>
         </div>

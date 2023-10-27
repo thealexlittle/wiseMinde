@@ -3,7 +3,7 @@ import { FaSoundcloud, FaSpotify, FaYoutube } from "react-icons/fa6"
 export default function Projects() {
     return (
         <div>
-            <h1 className="mb-4">The Projects</h1>
+            <h1 className="mb-4 p-1 bg-white inset-box">The Projects</h1>
             <div>
                 <ProjectList />
             </div>

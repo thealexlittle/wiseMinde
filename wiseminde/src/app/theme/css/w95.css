@@ -3744,6 +3744,7 @@ button.section-black:focus {
     color: #C9C9C9;
     border-radius: 0;
     border: 2px solid #BDBDBD;
+    z-index: 49;
  }
 
  .card-header .icon {
@@ -3763,6 +3764,15 @@ button.section-black:focus {
  .card-footer {
     padding: 10px 7px;
  }
+
+ .inset-box {
+    border-top: 2px solid #393939;
+    border-left: 2px solid #393939;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    border-radius: 0;
+
+}
 
 /**
  * = Close

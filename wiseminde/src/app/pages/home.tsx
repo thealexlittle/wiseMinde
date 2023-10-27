@@ -1,10 +1,10 @@
 export default function Home(){
     return(
-        <div className='card card-tertiary'>
+        <div className='card card-tertiary p-1'>
             <div className='card-header'>
                 home.exe
             </div>
-            <div className='card-body bg-white'>
+            <div className='card-body bg-white inset-box'>
                 <h1>Home</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa eget egestas purus viverra accumsan. Senectus et netus et malesuada fames ac. Posuere lorem ipsum dolor sit amet consectetur adipiscing. Purus gravida quis blandit turpis. Vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra. Eget velit aliquet sagittis id. Imperdiet dui accumsan sit amet nulla. Eu ultrices vitae auctor eu augue ut. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Eu sem integer vitae justo eget magna fermentum iaculis eu.
 

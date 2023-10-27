@@ -17,7 +17,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <link rel="stylesheet" href="w95.css" />
       <body className={inter.className}>{children}</body>
     </html>
   )

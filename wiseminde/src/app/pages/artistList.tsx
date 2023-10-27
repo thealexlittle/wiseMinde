@@ -1,46 +1,42 @@
 import { Link } from "react-router-dom"
+import data from "../data.json"
+import { ArtistData } from "./artist"
 
 export default function ArtistList() {
     return (
         <div>
-            <h1 className="mb-4">The Artists</h1>
+            <h1 className="mb-4 p-1 bg-white inset-box">The Artists</h1>
             <div className="mx-auto flex flex-row flex-wrap content-center">
-                <ArtistTile />
-                <ArtistTile />
+                {data.artists.map(e => { return <ArtistTile artist={e} /> })}
             </div>
 
         </div>
     )
 }
 
-function ArtistTile() {
+function ArtistTile(props: { artist: ArtistData }) {
     return (
-        // <div className="m-4">
-        //     <img src="https://picsum.photos/200" alt="" />
-        //     <h2>Artist</h2>
-        //     <h3>Artist/Artist/Artist</h3>
-        //     <div>See Bio</div>
-        // </div>
-        <section className=" flex-none min-w-64 max-w-3xl mx-auto m-4">
+        <section className=" flex-none mx-auto m-4">
             <div className='card card-tertiary'>
                 <div className='card-header'>
-                    artist.exe
+                    <h2>artist.exe</h2>
                 </div>
                 <div className='card-body'>
                     <h1 className='font-bold'>
-                        Artist
+                        {props.artist.name}
                     </h1>
                 </div>
                 <img
-                    className='card-img-top mx-1'
-                    src="https://picsum.photos/300"
+                    className='card-img-top mx-1 inset-box'
+                    src={props.artist.photo}
+                    style={{ maxWidth: "300px" }}
                     alt="image"
                 />
                 <div className='card-footer'>
-                    <h6 className="bg-white p-2 mb-2">
-                        Discipline/Discipline
-                    </h6>
-                    <Link to="/" className="btn">
+                    <p className="inset-box bg-white p-2 mb-2">
+                        {props.artist.outlets.map(o => { return "\\ " + o + " \\" })}
+                    </p>
+                    <Link to={`/artists/${props.artist.name}`} className="btn">
                         <span>See Bio</span>
                     </Link>
                 </div>
