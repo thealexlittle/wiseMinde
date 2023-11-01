@@ -1,10 +1,27 @@
 {
     "artists": [
         {
-            "name": "test",
-            "photo": "https://picsum.photos/300",
+            "name": "alexloggedin",
+            "photo": "/img/members/alexloggedin.png",
+            "icon": "img/gifs/planet.gif",
             "outlets": [
-                "testing"
+                "photographer",
+                "videographer"
+            ],
+            "socials": {
+                "ig": "alexloggedin",
+                "tw": "alexloggedout",
+                "yt": "youtube",
+                "sp": "spotify"
+            }
+        },
+        {
+            "name": "dadecountydiego",
+            "photo": "https://picsum.photos/300",
+            "icon": "img/gifs/planet.gif",
+            "outlets": [
+                "producer",
+                "rapper"
             ],
             "socials": {
                 "ig": "test",
@@ -14,18 +31,31 @@
             }
         },
         {
-            "name": "alexloggedin",
-            "photo": "/img/members/alexloggedin.png",
+            "name": "artystick",
+            "photo": "https://picsum.photos/300",
+            "icon": "img/gifs/planet.gif",
             "outlets": [
-                "photographer",
-                "videographer",
-                "designer"
+                "rapper",
+                "producer"],
+            "socials": {
+                "ig": "test",
+                "tw": "",
+                "yt": "",
+                "sp": ""
+            }
+        },
+        {
+            "name": "britkay47",
+            "photo": "https://picsum.photos/300",
+            "icon": "img/gifs/planet.gif",
+            "outlets": [
+                "rapper"
             ],
             "socials": {
-                "ig": "alexloggedin",
-                "tw": "alexloggedout",
-                "yt": "youtube",
-                "sp": "spotify"
+                "ig": "test",
+                "tw": "",
+                "yt": "",
+                "sp": ""
             }
         }
     ],

@@ -6,6 +6,7 @@ export interface ArtistData {
     name: string,
     photo: string,
     outlets: string[],
+    icon: string,
     socials: {
         ig: string,
         tw: string,
@@ -22,15 +23,15 @@ export default function ArtistPage() {
         return ad ? ad : data.artists[0]
     }
 
-    function getBio(name:string|undefined): string|undefined {
-        const b: string|undefined = data.bios.find( e => { return e.name == name})?.bio
+    function getBio(name: string | undefined): string | undefined {
+        const b: string | undefined = data.bios.find(e => { return e.name == name })?.bio
         return b ? b : data.bios[0].bio
     }
 
     return (
         <main className="flex flex-col px-2 md:flex-row w-full">
             <Details artist={getArtist(artistname)} />
-            <Bio bio={getBio(artistname)}/>
+            <Bio bio={getBio(artistname)} />
         </main>
     )
 }
@@ -43,20 +44,25 @@ function Details(props: { artist: ArtistData }) {
                 <div className='card-header'>
                     <h2>artist.exe</h2>
                 </div>
-                <div className='card-body'>
+                <div className='card-body flex flex-row align-baseline'>
+                    <img
+                        src={props.artist.icon}
+                        style={{ maxWidth: "2.5em" }}
+                        className="inset-box mr-2"
+                        alt="spinning star" />
                     <h6 className='font-bold'>
                         {props.artist.name}
                     </h6>
                 </div>
                 <img
                     className='card-img-top mx-2 inset-box'
-                    style={{maxWidth: "300px"}}
+                    style={{ maxWidth: "300px" }}
                     src={props.artist.photo}
                     alt="image"
                 />
                 <div className='card-footer'>
                     <p className="inset-box bg-white p-2 mb-2">
-                        {props.artist.outlets.map (o => {return "\\ " +o+" \\"})}
+                        {props.artist.outlets.map(o => { return "\\ " + o + " \\" })}
                     </p>
                     <Socials socials={props.artist.socials} />
                 </div>
@@ -81,7 +87,7 @@ function Socials(props: { socials: ArtistData["socials"] }) {
     )
 }
 
-function Bio(props:{bio: string|undefined}) {
+function Bio(props: { bio: string | undefined }) {
     return (
         <div className='card card-tertiary'>
             <div className='card-header'>

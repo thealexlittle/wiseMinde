@@ -3,7 +3,13 @@ import { FaSoundcloud, FaSpotify, FaYoutube } from "react-icons/fa6"
 export default function Projects() {
     return (
         <div>
-            <h1 className="mb-4 p-1 bg-white inset-box">The Projects</h1>
+            <div className="flex flex-row  bg-white inset-box mb-3 align-baseline">
+                <img
+                    src="img/gifs/gallery.gif"
+                    style={{ maxWidth: "3em", maxHeight: "auto" }}
+                    className="mr-2 card" />
+                <h1 className="pt-1">The Projects</h1>
+            </div>
             <div>
                 <ProjectList />
             </div>
@@ -133,7 +139,7 @@ function Links() {
                 <FaYoutube size="1.5em" />
             </a>
             <a href="https://www.spotify.com" className='btn'>
-                <FaSpotify  size="1.5em" />
+                <FaSpotify size="1.5em" />
             </a>
         </ul>
     )

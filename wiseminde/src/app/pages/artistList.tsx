@@ -5,7 +5,13 @@ import { ArtistData } from "./artist"
 export default function ArtistList() {
     return (
         <div>
-            <h1 className="mb-4 p-1 bg-white inset-box">The Artists</h1>
+            <div className="flex flex-row  bg-white inset-box mb-3 align-baseline">
+                <img
+                    src="img/gifs/artists.gif"
+                    style={{ maxWidth: "3em", maxHeight: "auto" }}
+                    className="mr-2 card" />
+                <h1 className="pt-3">The Artists</h1>
+            </div>
             <div className="mx-auto flex flex-row flex-wrap content-center">
                 {data.artists.map(e => { return <ArtistTile artist={e} /> })}
             </div>
@@ -21,7 +27,12 @@ function ArtistTile(props: { artist: ArtistData }) {
                 <div className='card-header'>
                     <h2>artist.exe</h2>
                 </div>
-                <div className='card-body'>
+                <div className='card-body flex flex-row align-middle'>
+                    <img
+                        src={props.artist.icon}
+                        style={{ maxWidth: "2em" }}
+                        className="inset-box mr-2"
+                        alt="spinning star" />
                     <h1 className='font-bold'>
                         {props.artist.name}
                     </h1>
